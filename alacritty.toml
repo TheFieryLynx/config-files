@@ -1,0 +1,20 @@
+import = ["~/.config/alacritty/nord.toml", "~/.config/alacritty/keyboard.toml"]
+
+live_config_reload = true
+
+[window]
+dimensions = { columns = 140, lines = 50 }
+padding = { x = 10, y = 10 }
+decorations = "Buttonless"
+opacity = 0.6
+blur = true
+option_as_alt = "Both"
+
+[font]
+normal = { family = "Hack Nerd Font Mono", style = "Regular" }
+size = 18
+
+[cursor]
+style = { shape = "Beam", blinking = "Always" }
+vi_mode_style = { shape = "Beam", blinking = "Always" }
+unfocused_hollow = false

@@ -18,9 +18,9 @@ return {
       }
     }
     -- set keymaps
-    local keymap = vim.keymap
 
-    keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
-
+    require("which-key").register({
+      ["<leader>e"] = { "<cmd>NvimTreeToggle<CR>", "Toggle file explorer" },
+    })
   end,
 }

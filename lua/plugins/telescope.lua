@@ -5,13 +5,22 @@ return {
     local telescope = require('telescope')
     local telescope_builtin = require('telescope.builtin')
 
-    -- set keymaps
-    local keymap = vim.keymap
+    require("which-key").register({
+      ["<leader><Space>"] = { telescope_builtin.find_files, "Search files" },
+    })
 
-    keymap.set('n', '<leader><Space>', telescope_builtin.find_files, {})
-    keymap.set('n', '<leader>fg', telescope_builtin.live_grep, {})
-    keymap.set('n', '<leader>fb', telescope_builtin.buffers, {})
-    keymap.set('n', '<leader>fh', telescope_builtin.help_tags, {})
+
+    require("which-key").register({
+      ["<leader>fg"] = { telescope_builtin.live_grep, "Grep all files" },
+    })
+
+    require("which-key").register({
+      ["<leader>fb"] = { telescope_builtin.buffers, "Search buffers" },
+    })
+
+    require("which-key").register({
+      ["<leader>fh"] = { telescope_builtin.help_tags, "Search help tags" },
+    }) 
 
   end,
 }

@@ -9,6 +9,7 @@ opt.termguicolors = true
 opt.tabstop = 2
 opt.expandtab = true
 opt.shiftwidth = 2
-
+opt.guicursor = "a:ver100"
+opt.clipboard = "unnamedplus"
 
 vim.g.mapleader = " "

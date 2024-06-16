@@ -22,5 +22,9 @@ return {
     require("which-key").register({
       ["<leader>e"] = { "<cmd>NvimTreeToggle<CR>", "Toggle file explorer" },
     })
+
+    require("which-key").register({
+      ["<leader>E"] = { "<cmd>NvimTreeFocus<CR>", "Focus file explorer" },
+    })
   end,
 }

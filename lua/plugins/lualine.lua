@@ -3,11 +3,11 @@ return {
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   config = function()
     local lualine = require("lualine")
-    lualine.setup( {
-        options = {
-          theme = 'nord'
-        }
+    lualine.setup({
+      options = {
+        theme = 'nord'
       }
+    }
     )
   end
 }

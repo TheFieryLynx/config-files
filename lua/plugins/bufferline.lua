@@ -11,25 +11,25 @@ return {
     })
 
     local buffer = require("bufferline")
-    buffer.setup( {
-        options = {
-          separator_style = "thin",
-          highlights = highlights,
-          offsets = {
-            {
-              filetype = "NvimTree",
-              text="Nvim Tree",
-              separator= true,
-              text_align = "left"
-            }
-          },
-          diagnostics = "nvim_lsp",
-          modified_icon = '●',
-          show_close_icon = true,
-          close_icon = '󰅖',
-          show_buffer_close_icons = true,
-        }
+    buffer.setup({
+      options = {
+        separator_style = "thin",
+        highlights = highlights,
+        offsets = {
+          {
+            filetype = "NvimTree",
+            text = "Nvim Tree",
+            separator = true,
+            text_align = "left"
+          }
+        },
+        diagnostics = "nvim_lsp",
+        modified_icon = '●',
+        show_close_icon = true,
+        close_icon = '󰅖',
+        show_buffer_close_icons = true,
       }
+    }
     )
     require("which-key").register({
       ["<leader>h"] = { "<cmd> BufferLineCyclePrev <CR>", "Buffer prev" },

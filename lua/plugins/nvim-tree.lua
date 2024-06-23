@@ -8,7 +8,7 @@ return {
     vim.g.loaded_netrwPlugin = 1
     vim.g.nvim_tree_ignore = { ".git", "node_modules", ".cache" }
 
-    nvtree.setup{
+    nvtree.setup {
       view = {
         width = 35,
         relativenumber = true,

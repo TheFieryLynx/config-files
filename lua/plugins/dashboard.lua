@@ -5,8 +5,8 @@ return {
     dependencies = { 'MunifTanjim/nui.nvim' }
   },
   event = "VimEnter",
-  config = function ()
-    require("dashboard").setup{
+  config = function()
+    require("dashboard").setup {
       theme = 'doom',
       config = {
         packages = { enable = true },

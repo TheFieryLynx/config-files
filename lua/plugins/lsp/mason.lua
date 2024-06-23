@@ -30,10 +30,11 @@ return {
     mason_tool_installer.setup({
       ensure_installed = {
         "prettier",
-        "stylua", 
-        "isort", 
+        "stylua",
+        "isort",
         "black",
         "pylint",
+        "ansible-lint"
       },
     })
   end,

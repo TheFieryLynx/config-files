@@ -12,4 +12,7 @@ opt.shiftwidth = 2
 opt.guicursor = "a:ver100"
 opt.clipboard = "unnamedplus"
 
+vim.wo.relativenumber = true
 vim.g.mapleader = " "
+
+

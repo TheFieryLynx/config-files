@@ -24,7 +24,7 @@ return {
     })
 
     require("which-key").register({
-      ["<leader>E"] = { "<cmd>NvimTreeFocus<CR>", "Focus file explorer" },
+      ["<leader>ef"] = { "<cmd>NvimTreeFocus<CR>", "Focus file explorer" },
     })
   end,
 }

@@ -4,7 +4,7 @@ return {
     vim.opt.termguicolors = true
 
     local highlights = require("nord").bufferline.highlights({
-      italic = true,
+      italic = false,
       bold = true,
       fill = "#181c24",
       buffer_bg = "#000000"

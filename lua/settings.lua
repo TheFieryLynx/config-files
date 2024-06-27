@@ -12,7 +12,7 @@ opt.shiftwidth = 2
 opt.guicursor = "a:ver100"
 opt.clipboard = "unnamedplus"
 
-vim.wo.relativenumber = true
+vim.wo.number = true
 vim.g.mapleader = " "
 
 vim.api.nvim_create_autocmd('BufWritePre', {

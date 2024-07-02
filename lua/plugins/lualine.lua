@@ -7,7 +7,6 @@ return {
       options = {
         theme = 'nord'
       }
-    }
-    )
+    })
   end
 }

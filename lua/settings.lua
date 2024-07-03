@@ -11,6 +11,9 @@ opt.expandtab = true
 opt.shiftwidth = 2
 opt.guicursor = "a:ver100"
 opt.clipboard = "unnamedplus"
+opt.ignorecase = true
+opt.smartcase = true
+opt.signcolumn = "yes"
 
 vim.wo.number = true
 vim.g.mapleader = " "

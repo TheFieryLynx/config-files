@@ -18,13 +18,5 @@ opt.signcolumn = "yes"
 vim.wo.number = true
 vim.g.mapleader = " "
 
-vim.cmd('set selection=exclusive')
-vim.o.virtualedit = 'onemore'
-
-vim.api.nvim_create_autocmd('BufWritePre', {
-  callback = function()
-    vim.lsp.buf.format({
-      async = false
-    })
-  end
-})
+vim.cmd("set selection=exclusive")
+vim.o.virtualedit = "onemore"

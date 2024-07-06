@@ -62,9 +62,6 @@ return {
         lspconfig.pyright.setup({
           capabilities = capabilities,
           filetypes = { "python" },
-          on_init = function()
-            return pyright_on_init()
-          end,
         })
       end,
 

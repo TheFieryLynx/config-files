@@ -10,7 +10,7 @@ return {
       theme = "doom",
       config = {
         packages = { enable = true },
-        header = require("plugins.assets.ascii").header2,
+        header = require("user-settings").dashboard_header,
         center = {
           {
             icon = " ",

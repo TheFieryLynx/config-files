@@ -22,7 +22,7 @@ local function pyright_on_init()
     local cwd = vim.fn.getcwd()
     local current_venv = find_venv(cwd)
     if current_venv then
-      vim.fn.setenv('VIRTUAL_ENV', current_venv)
+      vim.fn.setenv("VIRTUAL_ENV", current_venv)
 
       vim.schedule(function()
         vim.cmd("LspRestart pyright")

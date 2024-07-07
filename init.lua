@@ -1,2 +1,2 @@
-require 'settings'
-require 'lazy-conf'
+require("settings")
+require("lazy-conf")

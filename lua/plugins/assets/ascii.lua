@@ -39,9 +39,7 @@ local dashboard_headers = {
     " ⣿⣿⣿⣶⣶⣮⣥⣒⠲⢮⣝⡿⣿⣿⡆⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⣠⣴⣿⣿⣿ ",
     "",
     "",
-  }
+  },
 }
-
-
 
 return dashboard_headers

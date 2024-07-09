@@ -18,7 +18,7 @@ return {
         markdown = { "prettier" },
         graphql = { "prettier" },
         lua = { "stylua" },
-        python = { "isort", "ruff" },
+        python = { "ruff_format" },
       },
       format_on_save = {
         lsp_fallback = true,

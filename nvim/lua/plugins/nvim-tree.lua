@@ -15,6 +15,8 @@ return {
       },
       git = {
         enable = true,
+        ignore = false,
+        timeout = 500,
       },
     })
     -- set keymaps

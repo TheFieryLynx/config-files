@@ -3,8 +3,8 @@ local ascii_headers = require("plugins.assets.ascii")
 
 local user_settings = {
   dashboard_header = ascii_headers.header3,
-  theme = system_settings.available_themes.nord,
-  transparent_background = true,
+  theme = system_settings.available_themes.catppuccin,
+  transparent_background = false,
 }
 
 return user_settings

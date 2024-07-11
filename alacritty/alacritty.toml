@@ -1,4 +1,8 @@
-import = ["~/.config/alacritty/nord.toml", "~/.config/alacritty/keyboard.toml"]
+import = [
+"~/.config/alacritty/catppuccin-frappe.toml",
+#"~/.config/alacritty/nord.toml", 
+"~/.config/alacritty/keyboard.toml"
+]
 
 live_config_reload = true
 
@@ -9,7 +13,9 @@ TERM = "xterm-256color"
 dimensions = { columns = 140, lines = 50 }
 padding = { x = 10, y = 10 }
 decorations = "Buttonless"
-opacity = 0.6
+#opacity = 0.6
+#blur = true
+opacity = 1
 blur = true
 option_as_alt = "Both"
 

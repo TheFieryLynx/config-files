@@ -34,6 +34,9 @@ return {
           },
         },
         diagnostics = "nvim_lsp",
+        diagnostics_indicator = function(count, level, diagnostics_dict, context)
+          return "(" .. count .. ")"
+        end,
         modified_icon = "●",
         show_close_icon = true,
         close_icon = "󰅖",
@@ -41,8 +44,8 @@ return {
       },
     })
     require("which-key").register({
-      ["<leader>h"] = { "<cmd> BufferLineCyclePrev <CR>", "Buffer prev" },
-      ["<leader>l"] = { "<cmd> BufferLineCycleNext <CR>", "Buffer next" },
+      ["<Tab>"] = { "<cmd> BufferLineCyclePrev <CR>", "Buffer prev" },
+      ["<S-Tab>"] = { "<cmd> BufferLineCycleNext <CR>", "Buffer next" },
       ["<leader>w"] = { "<cmd> bp|sp|bn|bd! <CR>", "Buffer close" },
     })
   end,

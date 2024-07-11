@@ -43,10 +43,8 @@ return {
         show_buffer_close_icons = true,
       },
     })
-    require("which-key").register({
-      ["<Tab>"] = { "<cmd> BufferLineCycleNext <CR>", "Buffer prev" },
-      ["<S-Tab>"] = { "<cmd> BufferLineCyclePrev <CR>", "Buffer next" },
-      ["<leader>w"] = { "<cmd> bp|sp|bn|bd! <CR>", "Buffer close" },
-    })
+    vim.keymap.set("n", "<Tab>", "<cmd> BufferLineCycleNext <CR>", { desc = "Buffer next" })
+    vim.keymap.set("n", "<S-Tab>", "<cmd>  BufferLineCyclePrev <CR>", { desc = "Buffer prev" })
+    vim.keymap.set("n", "<leader>w", "<cmd> bp|sp|bn|bd! <CR>", { desc = "Buffer close" })
   end,
 }

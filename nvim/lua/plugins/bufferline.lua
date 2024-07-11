@@ -44,8 +44,8 @@ return {
       },
     })
     require("which-key").register({
-      ["<Tab>"] = { "<cmd> BufferLineCyclePrev <CR>", "Buffer prev" },
-      ["<S-Tab>"] = { "<cmd> BufferLineCycleNext <CR>", "Buffer next" },
+      ["<Tab>"] = { "<cmd> BufferLineCycleNext <CR>", "Buffer prev" },
+      ["<S-Tab>"] = { "<cmd> BufferLineCyclePrev <CR>", "Buffer next" },
       ["<leader>w"] = { "<cmd> bp|sp|bn|bd! <CR>", "Buffer close" },
     })
   end,

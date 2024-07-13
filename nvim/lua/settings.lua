@@ -15,6 +15,8 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.signcolumn = "yes"
 
+vim.wo.scrolloff = 5
+
 vim.wo.number = true
 vim.g.mapleader = " "
 

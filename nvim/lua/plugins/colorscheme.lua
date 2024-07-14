@@ -23,6 +23,15 @@ local catppuccin_config = {
     require("catppuccin").setup({
       flavour = "frappe",
       transparent_background = user_settings.transparent_background,
+      default_integrations = true,
+      integrations = {
+        nvimtree = true,
+        mason = true,
+        notify = true,
+        dashboard = true,
+        treesitter = true,
+        which_key = true,
+      },
     })
     vim.cmd([[colorscheme catppuccin]])
   end,

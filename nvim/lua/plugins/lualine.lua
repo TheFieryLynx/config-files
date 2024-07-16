@@ -8,6 +8,15 @@ return {
       options = {
         theme = user_settings.theme,
       },
+      sections = {
+        lualine_c = {
+          {
+            "filename",
+            file_status = true,
+            path = 1,
+          },
+        },
+      },
     })
   end,
 }

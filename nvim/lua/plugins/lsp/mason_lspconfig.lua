@@ -44,13 +44,6 @@ return {
 
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-    local ruff_on_attach = function(client, bufnr)
-      if client.name == "ruff_lsp" then
-        -- Disable hover in favor of Pyright
-        client.server_capabilities.hoverProvider = false
-      end
-    end
-
     require("mason-lspconfig").setup_handlers({
       function(server_name)
         require("lspconfig")[server_name].setup({})
@@ -69,28 +62,6 @@ return {
         lspconfig.pyright.setup({
           capabilities = capabilities,
           filetypes = { "python" },
-          settings = {
-            pyright = {
-              disableOrganizeImports = true,
-            },
-            python = {
-              analysis = {
-                ignore = { "*" },
-              },
-            },
-          },
-        })
-      end,
-
-      ["ruff_lsp"] = function()
-        local lspconfig = require("lspconfig")
-        lspconfig.ruff_lsp.setup({
-          on_attach = ruff_on_attach,
-          init_options = {
-            settings = {
-              args = {},
-            },
-          },
         })
       end,
 

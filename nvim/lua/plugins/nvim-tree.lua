@@ -18,6 +18,15 @@ return {
         ignore = false,
         timeout = 500,
       },
+      filters = {
+        custom = {
+          ".git",
+          ".idea",
+          ".DS_Store",
+          ".ruff_cache",
+          "__pycache__",
+        },
+      },
     })
     -- set keymaps
 

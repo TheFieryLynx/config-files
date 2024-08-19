@@ -19,8 +19,6 @@ opacity = 0.8
 blur = true
 option_as_alt = "Both"
 
-
-
 [font]
 normal = { family = "Hack Nerd Font Mono", style = "Regular" }
 size = 18

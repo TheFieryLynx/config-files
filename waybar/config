@@ -38,27 +38,21 @@
 	},
 
 
-	"hyprland/workspaces": {
-		"format": "{icon}",
-		"on-click": "activate",
-		"persistent-workspaces": {
-		      "1": [],
-		      "2": [],
-		      "3": [],
-		      "4": [],
-		    },
-		"format-icons": {
-			"1": "󰖟",
-			"2": "󰳫",
-			"3": "",
-			"4": "",
-			"5": "",
-			"6": "󰊗",
-			"7": "",
-			},
-		"tooltip": false
-	},
-
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "urgent": "",
+      "active": "",
+      "default": ""
+    },
+    "sort-by-number": true
+  },
 
 	"hyprland/language": {
 	    "format": "{}",

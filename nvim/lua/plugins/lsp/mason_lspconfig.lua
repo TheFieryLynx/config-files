@@ -42,15 +42,37 @@ return {
     local mason_lspconfig = require("mason-lspconfig")
     mason_lspconfig.setup({})
 
+    local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+    for type, icon in pairs(signs) do
+      local hl = "DiagnosticSign" .. type
+      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+    end
+
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+    local lspconfig = require("lspconfig")
 
     require("mason-lspconfig").setup_handlers({
       function(server_name)
         require("lspconfig")[server_name].setup({})
       end,
 
+      ["svelte"] = function()
+        lspconfig["svelte"].setup({
+          capabilities = capabilities,
+          on_attach = function(client, _)
+            vim.api.nvim_create_autocmd("BufWritePost", {
+              pattern = { "*.js", "*.ts" },
+              callback = function(ctx)
+                -- Here use ctx.match instead of ctx.file
+                client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
+              end,
+            })
+          end,
+        })
+      end,
+
       ["ansiblels"] = function()
-        local lspconfig = require("lspconfig")
         lspconfig.ansiblels.setup({
           filetypes = { "yaml", "yml" },
           capabilities = capabilities,
@@ -58,7 +80,6 @@ return {
       end,
 
       ["pyright"] = function()
-        local lspconfig = require("lspconfig")
         lspconfig.pyright.setup({
           capabilities = capabilities,
           filetypes = { "python" },
@@ -66,7 +87,6 @@ return {
       end,
 
       ["lua_ls"] = function()
-        local lspconfig = require("lspconfig")
         lspconfig.lua_ls.setup({
           capabilities = capabilities,
           settings = {
@@ -80,17 +100,15 @@ return {
       end,
 
       ["tsserver"] = function()
-        local lspconfig = require("lspconfig")
         lspconfig.tsserver.setup({
           capabilities = capabilities,
         })
       end,
 
       ["eslint"] = function()
-        local lspconfig = require("lspconfig")
         lspconfig.eslint.setup({
           capabilities = capabilities,
-          on_attach = function(client, bufnr)
+          on_attach = function(_, bufnr)
             vim.api.nvim_create_autocmd("BufWritePre", {
               buffer = bufnr,
               command = "EslintFixAll",

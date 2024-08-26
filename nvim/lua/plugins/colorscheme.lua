@@ -21,7 +21,7 @@ local catppuccin_config = {
     local user_settings = require("user-settings")
 
     require("catppuccin").setup({
-      flavour = "frappe",
+      flavour = "macchiato",
       transparent_background = user_settings.transparent_background,
       default_integrations = true,
       integrations = {

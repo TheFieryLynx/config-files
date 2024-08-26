@@ -55,6 +55,7 @@ button:hover {
 #disk,
 #cpu,
 #memory,
+#language,
 #pulseaudio {
   padding: 0 10px;
 }
@@ -73,6 +74,10 @@ button:hover {
 
 #disk {
   color: @sapphire;
+}
+
+#language {
+  color: #ffffff;
 }
 
 #network {

@@ -15,11 +15,12 @@
       "hyprland/workspaces",
     ],
     "modules-right": [
+      "hyprland/language",
       "pulseaudio",
       "network",
       "temperature",
-      "clock",
       "disk",
+      "clock",
     ],
     "hyprland/window": {
       "format": "{}",
@@ -35,11 +36,20 @@
       "format-icons": {
         "active": " ",
       },
+      
       "sort-by-number": true,
+      "active-only": false,
       "persistent-workspaces": {
-        "*": 4, // 5 workspaces by default on every monitor
-        "HDMI-A-1": 10 // but only three on HDMI-A-1
+        "*": 7, // 5 workspaces by default on every monitor
+        "HDMI-A-1": 7, // but only three on HDMI-A-1
+        "DP-2": 7,
       },
+    },
+
+    "hyprland/language": {
+      "format": "{}",
+      "format-en": "EN",
+      "format-ru": "RU",
     },
 
     "disk": {

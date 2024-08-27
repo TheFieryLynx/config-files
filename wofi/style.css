@@ -1,75 +1,62 @@
-/* параметры вообще для всего */
-*{
-    font-family: JetBrainsMono;
-    font-size: 11px;
+@define-color background rgba(36, 39, 58, 0.95);
+@define-color foreground rgb(220, 220, 220);
+@define-color outline rgb(245, 169, 127);
+@define-color accent rgb(226, 204, 219);
+@define-color textbox rgba(110, 115, 141, 0.95);
+@define-color highlight rgba(183, 189, 248, 0.2);
+
+* {
+  all: unset;
 }
 
-/* COLOR */
-@define-color bg #2f343f;
-@define-color fg #d8dee8;
-@define-color fg_2 #d8dee8;
-
-/* параметры для окна */
 window {
-    background-color: @bg;
-    border-radius: 15px;
+  background-color: @background;
+  border-radius: 50px;
+  border: 2px solid @outline;
+  font-family: Hack Nerd Font Mono;
+  font-weight: 200;
 }
 
-/* параметры для окна ввода */
-#input {
-    margin: 10 15 10 15px;
-    padding: 5;
-    border-radius: 5px;
-    border: none;
-    border-bottom: 0px solid #2f343f;
-    background-color: @fg;
-    color: @bg;
-}
-
-/* параметры для окна с приложениями */
-#inner-box {
-    background-color: @bg;
-
-}
-
-/* параметры пространства вокруг окна wofi */
 #outer-box {
-    margin: 20px;
-    padding:0px;
-    background-color: @bg;
+  padding: 2em;
 }
 
-/* параметры для полосы прокрутки */
+#input {
+  padding: 1em 0.75em;
+  margin: 0em 0.25em;
+  font-size: 1.5em;
+  background-color: @background;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#input:focus {
+  background: @highlight;
+  border: 1px solid @outline;
+}
+
 #scroll {
-    background-color: @bg;
+  margin-top: 1.5em;
 }
 
-/* параметры для текста */
-#text {
-padding: 5px;
-color: @fg;
+#entry {
+  border: 1px solid transparent;
+  padding: 1em;
+  margin: 0.25rem;
+  font-weight: normal;
+  border-radius: 25px;
+  transition:
+    box-shadow 0.1s ease-in-out,
+    background-color 0.3s ease-in-out;
 }
 
-/* параметры для 2й колонки если таковая имеется */
-#entry:nth-child(even){
-    background-color: @bg;
+#entry image {
+  margin-right: 0.75em;
 }
 
-/* параметры для выделенного пункта */
 #entry:selected {
-    border-radius: 5px;
-    background-color: @fg_2;
-    font-color: @bg;
+  background-color: @highlight;
+  border: 1px solid @outline;
+  border-radius: 25px;
 }
-
-/* параметры выделенного текста */
-#text:selected {
-color: @bg;
-}
-
-/* параметры для иконок */
-#img
-
-/* параметры для не выделенного */
-#unselected
-

@@ -19,8 +19,12 @@ local catppuccin_config = {
   priority = 1000,
   config = function()
     local user_settings = require("user-settings")
-
     require("catppuccin").setup({
+      custom_highlights = function(colors)
+        return {
+          IlluminatedWordRead = { bg = colors.surface2 },
+        }
+      end,
       flavour = "macchiato",
       transparent_background = user_settings.transparent_background,
       default_integrations = true,
@@ -31,6 +35,10 @@ local catppuccin_config = {
         dashboard = true,
         treesitter = true,
         which_key = true,
+        illuminate = {
+          enabled = true,
+          lsp = true,
+        },
       },
     })
     vim.cmd([[colorscheme catppuccin]])

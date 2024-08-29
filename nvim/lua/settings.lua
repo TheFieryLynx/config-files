@@ -17,6 +17,10 @@ opt.signcolumn = "yes"
 
 vim.wo.scrolloff = 5
 
+vim.diagnostic.config({
+  virtual_text = false,
+})
+
 vim.wo.number = true
 vim.g.mapleader = " "
 

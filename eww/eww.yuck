@@ -1,0 +1,15 @@
+(
+  defwindow example
+    :monitor 1
+    :geometry (geometry  :x "200px"
+                         :y "900px"
+                         :width "2000px"
+                         :height "50px"
+                         :anchor "top center"
+            )
+    :stacking "fg"
+    :exclusive false
+    :focusable false
+  "example content"
+)
+

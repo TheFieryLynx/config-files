@@ -106,6 +106,9 @@ return {
         { name = "path" },
         { name = "lazydev", group_index = 0 },
       }),
+      formatting = {
+        format = require("nvim-highlight-colors").format,
+      },
     })
   end,
 }

@@ -1,0 +1,36 @@
+(defvar open_theme_picker false)
+
+(defwidget theme_preview [name]
+  (
+    box :class "theme_preview"
+        :height 300
+        :width 400
+        :style "background-image: url('/home/andrew/.config/wallpapers/tokyo.png');"
+        
+    name
+  )
+)
+
+(defwidget theme_list []
+  (box :class "theme_list"
+       :spacing 80
+       :valign "center" :halign "center"
+       :space-evenly true
+    (theme_preview :name "cattpuccin")   
+    (theme_preview :name "gruvbox")
+    (theme_preview :name "solorized")
+  )   
+)
+
+
+(defwindow theme_picker
+    :class "theme_picker"
+    :monitor 0
+    :geometry (geometry  :width "1500px"
+                         :height "400px"
+                         :anchor "center"
+            )
+    :stacking "fg"
+    (theme_list)
+)
+

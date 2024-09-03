@@ -1,1 +1,1 @@
-(include "modules/test.yuck")
+(include "modules/theme_picker.yuck")

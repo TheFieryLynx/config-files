@@ -24,5 +24,9 @@ vim.diagnostic.config({
 vim.wo.number = true
 vim.g.mapleader = " "
 
+vim.g.yuck_lisp_indentation = 1
+vim.g.yuck_align_subforms = 1
+vim.g.yuck_align_multiline_strings = 1
+
 vim.cmd("set selection=exclusive")
 vim.o.virtualedit = "onemore"

@@ -1,0 +1,20 @@
+(defvar open_test false)
+
+(
+  defwindow example
+    :monitor 0
+    :geometry (geometry  :width "2000px"
+                         :height "400px"
+                         :anchor "center"
+            )
+    :stacking "fg"
+    :exclusive false
+    :focusable false
+    (box :space-evenly true
+      (image :path "/home/andrew/.config/wallpapers/cyberpunk-3.png"
+            :image-width "200px"
+            :image-height "200px"
+    )
+  )
+)
+

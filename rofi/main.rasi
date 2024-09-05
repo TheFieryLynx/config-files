@@ -46,7 +46,7 @@ mainbox {
 imagebox {
     padding:                     20px;
     background-color:            transparent;
-    background-image:            url("~/.config/wallpapers/anime-skull.png", height);
+    background-image:            url("~/.config/wallpapers/catppuccin/anime-skull.png", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "space", "mode-switcher" ];
 }

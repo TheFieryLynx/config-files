@@ -33,7 +33,7 @@ return {
     })
 
     if theme == sys_params.available_themes.gruvbox then
-      vim.cmd([[colorscheme gruvbox ]])
+      vim.cmd([[colorscheme gruvbox]])
     end
   end,
 }

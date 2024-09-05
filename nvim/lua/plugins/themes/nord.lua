@@ -8,7 +8,6 @@ return {
     local sys_params = require("system-params")
     vim.g.nord_disable_background = user_settings.transparent_background
     vim.g.nord_italic = false
-    require("nord").set()
     vim.opt.termguicolors = true
 
     if theme == sys_params.available_themes.nord then

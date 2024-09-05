@@ -1,6 +1,5 @@
 import = [
-"~/.config/alacritty/catppuccin.toml",
-# "~/.config/alacritty/nord.toml", 
+"~/.config/alacritty/CURRENT_THEME.toml",
 "~/.config/alacritty/keyboard.toml"
 ]
 
